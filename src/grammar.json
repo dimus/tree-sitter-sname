@@ -1,0 +1,21 @@
+{
+  "name": "YOUR_LANGUAGE_NAME",
+  "rules": {
+    "genus": {
+      "type": "PATTERN",
+      "value": "[A-Z][a-z]*"
+    }
+  },
+  "extras": [
+    {
+      "type": "PATTERN",
+      "value": "\\s"
+    }
+  ],
+  "conflicts": [],
+  "precedences": [],
+  "externals": [],
+  "inline": [],
+  "supertypes": []
+}
+
