@@ -1,7 +1,7 @@
 terminator = '\n';
 
 module.exports = grammar({
-  name: 'SciName',
+  name: 'sname',
 
   rules: {
     list: ($) => repeat($.sci_name),
