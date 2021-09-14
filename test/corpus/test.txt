@@ -84,3 +84,24 @@ Bubo bubo Linnaeus & Burg 1888
   (species (author) (author (year)))
 ))
 
+
+=====================
+Several Names
+=====================
+
+Bubo bubo Linnaeus & Burg 1888
+Pomatomus saltator
+
+----
+
+(list 
+ (sci_name
+  (genus)
+  (species (author) (author (year)))
+ )
+ (sci_name
+  (genus)
+  (species)
+ )
+ )
+
