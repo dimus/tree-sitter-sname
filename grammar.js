@@ -10,14 +10,26 @@ module.exports = grammar({
 
     genus: ($) => seq(/[A-Z][a-z]+/, optional($.subgenus)),
 
-    subgenus: ($) => seq('(', /[A-Z][a-z]+/, ')'),
+    subgenus: (_) => seq('(', /[A-Z][a-z]+/, ')'),
 
-    species: ($) => seq(/[a-z]+/, optional($.authorship)),
+    species: ($) =>
+      seq(
+        /[a-z]+/,
+        optional(
+          choice(
+            $.authorship_orig,
+            $.authorship,
+            seq($.authorship_orig, $.authorship)
+          )
+        )
+      ),
 
-    authorship: ($) => seq($.author, repeat($.author), optional($.year)),
+    authorship: ($) => seq(repeat1($.author), optional($.year)),
 
-    author: ($) => /[A-Za-z]+(,|\s+&)?/,
+    authorship_orig: ($) => seq('(', $.authorship, ')'),
 
-    year: ($) => /[12][7890][0-9]([0-9]|\?)[a-z]?/,
+    author: (_) => /[A-Za-z]+(,|\s+&)?/,
+
+    year: (_) => /[12][7890][0-9]([0-9]|\?)[a-z]?/,
   },
 });

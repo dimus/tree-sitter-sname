@@ -84,6 +84,25 @@ Bubo bubo Linnaeus & Burg 1888
   (species (authorship (author) (author) (year)))
 ))
 
+=========================
+Species Orig Authors Year
+=========================
+
+Bubo bubo (Linnaeus & Burg 1888)
+
+----
+
+(list (sci_name (genus) (species (authorship_orig (authorship (author) (author) (year))))))
+
+=========================
+Species Combo Authors Year
+=========================
+
+Bubo bubo (Linnaeus & Burg) Kenn 1888
+
+----
+
+(list (sci_name (genus) (species (authorship_orig (authorship (author) (author))) (authorship (author) (year)))))
 
 =====================
 Several Names
