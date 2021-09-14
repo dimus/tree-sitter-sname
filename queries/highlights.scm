@@ -1,4 +1,5 @@
 (genus) @type
-(species) @type
-(author) @comment
+(subgenus) @comment
+(species) @string
+(author) @parameter
 (year) @number
