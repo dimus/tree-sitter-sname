@@ -79,20 +79,32 @@
           "value": "[a-z]+"
         },
         {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "authorship"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        }
+      ]
+    },
+    "authorship": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "author"
+        },
+        {
           "type": "REPEAT",
           "content": {
             "type": "SYMBOL",
             "name": "author"
           }
-        }
-      ]
-    },
-    "author": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "PATTERN",
-          "value": "[A-Za-z]+(,|\\s+&)?"
         },
         {
           "type": "CHOICE",
@@ -107,6 +119,10 @@
           ]
         }
       ]
+    },
+    "author": {
+      "type": "PATTERN",
+      "value": "[A-Za-z]+(,|\\s+&)?"
     },
     "year": {
       "type": "PATTERN",

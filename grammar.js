@@ -12,9 +12,11 @@ module.exports = grammar({
 
     subgenus: ($) => seq('(', /[A-Z][a-z]+/, ')'),
 
-    species: ($) => seq(/[a-z]+/, repeat($.author)),
+    species: ($) => seq(/[a-z]+/, optional($.authorship)),
 
-    author: ($) => seq(/[A-Za-z]+(,|\s+&)?/, optional($.year)),
+    authorship: ($) => seq($.author, repeat($.author), optional($.year)),
+
+    author: ($) => /[A-Za-z]+(,|\s+&)?/,
 
     year: ($) => /[12][7890][0-9]([0-9]|\?)[a-z]?/,
   },

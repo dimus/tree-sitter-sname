@@ -1,12 +1,16 @@
 [
   {
-    "type": "author",
+    "type": "authorship",
     "named": true,
     "fields": {},
     "children": {
-      "multiple": false,
-      "required": false,
+      "multiple": true,
+      "required": true,
       "types": [
+        {
+          "type": "author",
+          "named": true
+        },
         {
           "type": "year",
           "named": true
@@ -68,11 +72,11 @@
     "named": true,
     "fields": {},
     "children": {
-      "multiple": true,
+      "multiple": false,
       "required": false,
       "types": [
         {
-          "type": "author",
+          "type": "authorship",
           "named": true
         }
       ]
@@ -94,6 +98,10 @@
   {
     "type": ")",
     "named": false
+  },
+  {
+    "type": "author",
+    "named": true
   },
   {
     "type": "year",
