@@ -30,6 +30,21 @@
     }
   },
   {
+    "type": "list",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "sci_name",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "sci_name",
     "named": true,
     "fields": {},

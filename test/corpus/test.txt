@@ -6,7 +6,7 @@ Bubo
 
 ----
 
-(sci_name (genus))
+(list (sci_name (genus)))
 
 ====================
 Subgenus
@@ -16,7 +16,7 @@ Bubo (Bubo)
 
 ----
 
-(sci_name (genus (subgenus)))
+(list (sci_name (genus (subgenus))))
 
 ====================
 Species
@@ -26,10 +26,10 @@ Bubo bubo
 
 ----
 
-(sci_name
+(list (sci_name
   (genus)
   (species)
-)
+))
 
 ====================
 Species Author
@@ -39,10 +39,10 @@ Bubo bubo Linnaeus
 
 ----
 
-(sci_name
+(list (sci_name
   (genus)
   (species (author))
-)
+))
 
 
 ====================
@@ -53,10 +53,10 @@ Bubo bubo Linnaeus, Burg
 
 ----
 
-(sci_name
+(list (sci_name
   (genus)
   (species (author) (author))
-)
+))
 
 ====================
 Species Authors 2
@@ -66,10 +66,10 @@ Bubo bubo Linnaeus & Burg
 
 ----
 
-(sci_name
+(list (sci_name
   (genus)
   (species (author) (author))
-)
+))
 
 =====================
 Species Authors Year
@@ -79,8 +79,8 @@ Bubo bubo Linnaeus & Burg 1888
 
 ----
 
-(sci_name
+(list (sci_name
   (genus)
   (species (author) (author (year)))
-)
+))
 

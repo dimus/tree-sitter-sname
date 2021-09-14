@@ -4,7 +4,7 @@ module.exports = grammar({
   name: 'SciName',
 
   rules: {
-    list: ($) => repeat(sci_name),
+    list: ($) => repeat($.sci_name),
 
     sci_name: ($) => seq($.genus, optional($.species), terminator),
 

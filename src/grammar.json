@@ -1,6 +1,13 @@
 {
   "name": "SciName",
   "rules": {
+    "list": {
+      "type": "REPEAT",
+      "content": {
+        "type": "SYMBOL",
+        "name": "sci_name"
+      }
+    },
     "sci_name": {
       "type": "SEQ",
       "members": [
