@@ -55,7 +55,7 @@ Bubo bubo Linnaeus, Burg
 
 (list (sci_name
   (genus)
-  (species (authorship (author) (author)))
+  (species (authorship (author (author_sep)) (author)))
 ))
 
 ====================
@@ -68,7 +68,7 @@ Bubo bubo Linnaeus & Burg
 
 (list (sci_name
   (genus)
-  (species (authorship (author) (author)))
+  (species (authorship (author (author_sep)) (author)))
 ))
 
 =====================
@@ -81,7 +81,7 @@ Bubo bubo Linnaeus & Burg 1888
 
 (list (sci_name
   (genus)
-  (species (authorship (author) (author) (year)))
+  (species (authorship (author (author_sep)) (author) (year)))
 ))
 
 =========================
@@ -92,7 +92,7 @@ Bubo bubo (Linnaeus & Burg 1888)
 
 ----
 
-(list (sci_name (genus) (species (authorship_orig (authorship (author) (author) (year))))))
+(list (sci_name (genus) (species (authorship_orig (authorship (author (author_sep)) (author) (year))))))
 
 =========================
 Species Combo Authors Year
@@ -102,7 +102,7 @@ Bubo bubo (Linnaeus & Burg) Kenn 1888
 
 ----
 
-(list (sci_name (genus) (species (authorship_orig (authorship (author) (author))) (authorship (author) (year)))))
+(list (sci_name (genus) (species (authorship_orig (authorship (author (author_sep)) (author))) (authorship (author) (year)))))
 
 =====================
 Several Names
@@ -116,7 +116,7 @@ Pomatomus saltator
 (list 
  (sci_name
   (genus)
-  (species (authorship (author) (author) (year)))
+  (species (authorship (author (author_sep)) (author) (year)))
  )
  (sci_name
   (genus)

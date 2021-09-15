@@ -28,7 +28,9 @@ module.exports = grammar({
 
     authorship_orig: ($) => seq('(', $.authorship, ')'),
 
-    author: (_) => /[A-Za-z]+(,|\s+&)?/,
+    author: ($) => seq(/[A-Za-z]+/, optional($.author_sep)),
+
+    author_sep: (_) => choice(',', /\s+&/),
 
     year: (_) => /[12][7890][0-9]([0-9]|\?)[a-z]?/,
   },

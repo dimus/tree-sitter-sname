@@ -156,8 +156,38 @@
       ]
     },
     "author": {
-      "type": "PATTERN",
-      "value": "[A-Za-z]+(,|\\s+&)?"
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "PATTERN",
+          "value": "[A-Za-z]+"
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "author_sep"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        }
+      ]
+    },
+    "author_sep": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "STRING",
+          "value": ","
+        },
+        {
+          "type": "PATTERN",
+          "value": "\\s+&"
+        }
+      ]
     },
     "year": {
       "type": "PATTERN",

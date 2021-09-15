@@ -1,5 +1,25 @@
 [
   {
+    "type": "author",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "author_sep",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "author_sep",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "authorship",
     "named": true,
     "fields": {},
@@ -119,8 +139,8 @@
     "named": false
   },
   {
-    "type": "author",
-    "named": true
+    "type": ",",
+    "named": false
   },
   {
     "type": "year",
