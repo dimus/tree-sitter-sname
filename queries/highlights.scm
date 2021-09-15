@@ -1,6 +1,7 @@
 (genus) @type
 (subgenus) @comment
 (species) @string
-(authorship_orig) @comment
+(authorship_orig) @type
 (author) @parameter
+(author_sep) @number
 (year) @number
