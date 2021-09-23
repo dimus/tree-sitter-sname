@@ -6,7 +6,8 @@ module.exports = grammar({
   rules: {
     list: ($) => repeat($.sci_name),
 
-    sci_name: ($) => seq($.genus, optional($.species), terminator),
+    sci_name: ($) =>
+      seq($.genus, optional($.species), optional($.tail), terminator),
 
     genus: ($) => seq(/[A-Z][a-z]+/, optional($.subgenus)),
 
@@ -33,5 +34,7 @@ module.exports = grammar({
     author_sep: (_) => choice(',', /\s+&/),
 
     year: (_) => /[12][7890][0-9]([0-9]|\?)[a-z]?/,
+
+    tail: ($) => token(prec(-1, /.+/)),
   },
 });

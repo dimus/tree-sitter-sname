@@ -98,6 +98,10 @@
         {
           "type": "species",
           "named": true
+        },
+        {
+          "type": "tail",
+          "named": true
         }
       ]
     }
@@ -141,6 +145,10 @@
   {
     "type": ",",
     "named": false
+  },
+  {
+    "type": "tail",
+    "named": true
   },
   {
     "type": "year",
